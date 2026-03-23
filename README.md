@@ -1,4 +1,4 @@
-# Supply Chain — Late Delivery Risk Prediction
+# Supply Chain  (Late Delivery Risk Prediction)
 
 Predicting whether an order will be delivered late using the DataCo Smart Supply Chain dataset.
 
@@ -17,7 +17,7 @@ Predicting whether an order will be delivered late using the DataCo Smart Supply
 
 ## Problem Statement
 
-A supply chain company loses money from late deliveries — unhappy customers, SLA breaches, and operational cost. The goal is to predict late deliveries **before they happen** so the business can anticipate and act before issues arise.
+A supply chain company loses money from late deliveries - unhappy customers, not meeting the promised service standard , and operational cost. The goal is to predict late deliveries **before they happen** so the business can anticipate and act before issues arise.
 
 ---
 
@@ -44,8 +44,8 @@ supply_chain/
 
 ### Feature Selection
 - **Geography dropped** — Region std=0.017, only 9 percentage point spread across entire world. Geography does not predict late delivery in this dataset
-- **High-cardinality columns dropped** — `Order City` (3,594 unique), `Order State` (1,089 unique) would cause memorization not learning(Overfit)
-- **Zero-variance column dropped** — `Product Status` (all 0s)
+- **High-cardinality columns dropped** - `Order City` (3,594 unique), `Order State` (1,089 unique) would cause memorization not learning(Overfit)
+- **Zero-variance column dropped** - `Product Status` (all 0s)
 - **17 clean features** kept with documented business reasoning
 
 ### Preprocessing
@@ -82,7 +82,7 @@ Default threshold (0.5) is too conservative — misses too many late deliveries.
 | 0.45 | 8,263 | 2,753 | 0.677 |
 | 0.50 | 8,830 | 2,121 | 0.667 |
 
-Threshold 0.41 chosen — best F1, catches the most late deliveries.
+Threshold 0.41 chosen - best F1, catches the most late deliveries.
 
 ---
 
@@ -107,7 +107,7 @@ CV std of ±0.0032 confirms the model is stable and not getting lucky on a singl
 ## Key Findings
 
 ### 1. Shipping Mode drives everything
-Feature importance shows Shipping Mode accounts for 79% of model importance — confirmed by EDA.
+Feature importance shows Shipping Mode accounts for 79% of model importance - confirmed by EDA.
 
 | Shipping Mode | Late Rate | Model Importance |
 |---|---|---|
